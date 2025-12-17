@@ -77,7 +77,7 @@ async def ask_gemini_analysis(lat: float, lon: float, solar: float, aqi: float, 
     if image_base64:
         prompt_text += "Analyze this image together with the scores.\n"
 
-    gemini_url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
+    gemini_url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
     headers = {"Content-Type": "application/json"}
     payload = {"contents": [{"parts": [{"text": prompt_text}]}]}
     if image_base64:
